@@ -6,6 +6,7 @@
     --boder-color: #dbdbdb;
     --header-height: 120px;
     --navbar-height: 34px;
+    --start-gold: #ffce3e;
     --h-w-s: calc(var(--header-height) - var(--navbar-height));
 }
 
@@ -32,8 +33,8 @@ html {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -12px;
-    margin-right: -12px;
+    margin-left: -5px;
+    margin-right: -5px;
 }
 
 
@@ -41,17 +42,21 @@ html {
 
 .grid__colum-2 {
     width: 16.667%;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.grid__colum-2-4 {
+    width: 20%;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .grid__colum-10 {
     width: 83.333%;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
-
-.grid__colum {}
 
 .grid__full-with {
     width: 100%;
@@ -147,3 +152,89 @@ html {
     cursor: default;
     background: #c3c3c3;
 }
+
+
+/* select-input */
+
+.select-input {
+    position: relative;
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.select-input__lable {
+    font-size: 1.4rem;
+}
+
+.select-input__icon {
+    font-size: 1.4rem;
+    color: #969696;
+    position: relative;
+    top: 1px;
+}
+
+.select-input__list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25px;
+    padding: 8px 16px;
+    list-style: none;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: none;
+    z-index: 1;
+}
+
+.select-input__item-link {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 4px 0;
+    display: block;
+}
+
+.select-input__item-link:hover {
+    color: var(--primary-color);
+}
+
+.select-input:hover .select-input__list {
+    display: block;
+}
+
+
+/* pagination */
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.pagination-item {}
+
+.pagination-item__active .pagination-item__link {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.pagination-item__link {
+    --height: 30px;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #939393;
+    min-width: 40px;
+    height: var(--height);
+    text-align: center;
+    line-height: var(--height);
+    border-radius: 2px;
+}
+
+.pagination-item__icon {}
